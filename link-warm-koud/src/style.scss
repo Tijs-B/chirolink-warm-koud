@@ -1,0 +1,92 @@
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#titel {
+  width: 600px;
+  max-width: 80vw;
+  margin: 0 auto 20px auto;
+
+  img {
+    width: 100%;
+  }
+}
+
+.container {
+  margin: 30px auto;
+  max-width: 80vw;
+  width: 600px;
+  font-family: Verdana, sans-serif;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  p {
+    font-family: Verdana, sans-serif;
+    text-align: left;
+    margin-bottom: 4px;
+    padding: 0 10px;
+  }
+}
+
+.progress {
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: Verdana, sans-serif;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  color: white;
+}
+
+.progress-inner {
+  background-color: white;
+  width: 0;
+  height: 100%;
+  z-index: 500;
+}
+
+#progress-percentage {
+  position: absolute;
+  z-index: 1000;
+}
+
+.progress-text span {
+  float: right;
+}
+
+.status {
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: none;
+  text-align: center;
+  font-size: 1.4rem;
+  /*color: black !important;*/
+}
+
+.status h2 {
+  font-size: 3em;
+}
+
+.wiggle {
+  animation: wiggle 0.5s linear infinite;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(10deg)
+  }
+  50% {
+    transform: rotate(-10deg)
+  }
+  100% {
+    transform: rotate(10deg)
+  }
+}
+
+#nauwkeurigheid-te-laag {
+  display: none;
+}

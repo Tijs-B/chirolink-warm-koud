@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chirolink: warm of koud</title>
+    <script src="https://kit.fontawesome.com/85cf9998d8.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <div id="titel">
+        <img src="./img/titel.svg" alt="Warm of Koud">
+    </div>
+    <p id="geef-toegang">We wachten op een GPS signaal. Als je nog geen toegang hebt gegeven tot je locatie, moet je dit
+        nog doen.</p>
+    <p id="nauwkeurigheid-te-laag">De nauwkeurigheid van de GPS is momenteel te laag. We wachten op een beter signaal...
+        Als je dit probleem blijft hebben, probeer dan de GPS op je gsm aan te zetten. Als dat niet lukt, doe dan de
+        reserve tochttechniek</p>
+    <div class="error">
+        <span id="error-msg"></span>
+    </div>
+    <div>
+        <div class="status" id="super-heet">
+            <h2><i class="fas fa-fire-alt wiggle"></i> SUPER HEET</h2>
+            <p>Je bent minder dan 10 meter van het juiste pad! Goed bezig!</p>
+        </div>
+        <div class="status" id="vrij-warm">
+            <h2><i class="fas fa-mug-hot"></i> VRIJ WARM</h2>
+            <p>Je bent tussen 10 en 20 meter van het juiste pad. Goed bezig!</p>
+        </div>
+        <div class="status" id="lauw">
+            <h2><i class="fas fa-water"></i> LAUW</h2>
+            <p>Je bent tussen 20 en 50 meter van het juiste pad.</p>
+        </div>
+        <div class="status" id="koud">
+            <h2><i class="fas fa-mitten"></i> KOUD</h2>
+            <p>Je bent tussen 50 en 100 meter van het juiste pad.</p>
+        </div>
+        <div class="status" id="vrieskou">
+            <h2><i class="fas fa-snowflake"></i> VRIESKOU</h2>
+            <p>Je bent tussen 100 meter en 500 meter van het juiste pad. Misschien toch maar terugkeren...</p>
+        </div>
+        <div class="status" id="extreme-kou">
+            <h2><i class="fas fa-icicles"></i> EXTREME KOU</h2>
+            <p>Je bent meer dan 500 meter van het juiste pad. Alles oke nog?</p>
+        </div>
+        <!--        <p class="info">Nauwkeurigheid: <span id="accuracy">-</span> m</p>-->
+    </div>
+</div>
+<div class="bottom">
+    <p><span id="updated">-</span> seconden geleden ververst</p>
+    <p class="progress-text">
+        Start tochttechniek
+        <span>Einde</span>
+    </p>
+    <div class="progress">
+        <span id="progress-percentage">-%</span>
+        <div id="progress-inner" class="progress-inner"></div>
+    </div>
+</div>
+</body>
+</html>
