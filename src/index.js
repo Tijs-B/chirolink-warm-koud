@@ -1,5 +1,5 @@
 import {calculateDistanceToTrack} from './distance.js';
-import {send} from './send.js';
+// import {send} from './send.js';
 import {setStatus} from './status.js';
 import './style.scss';
 
@@ -59,7 +59,7 @@ function positionSuccess(position) {
     setProgress(progress);
     setStatus(status);
     setAccuracy(accuracy);
-    send(lat, lon);
+    // send(lat, lon);
     showError("");
 }
 

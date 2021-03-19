@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
 let lastSend = 0;
-const url = "http://localhost:7767/location/post";
+const url = "http://ade7a4a596.duckdns.org:7767/location/post";
 
 const LOCALSTORAGE_UUID = 'locationUUID';
 
