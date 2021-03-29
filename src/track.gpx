@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="RouteYou" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <trk>
+    <name>Rotem - Opoeteren</name>
+    <desc>&lt;p&gt;Van Brugstraat, 3650 Rotem, België&lt;br/&gt;
+Naar Driepaalweg, 3680 Opoeteren, België&lt;/p&gt;
+
+&lt;p&gt;Routering Kortste - OSM&lt;/p&gt;</desc>
+    <trkseg>
+      <trkpt lat="51.05435" lon="5.67973">
+        <ele>87</ele>
+      </trkpt>
+      <trkpt lat="51.05435" lon="5.67972">
+        <ele>87</ele>
+      </trkpt>
+      <trkpt lat="51.05289" lon="5.67947">
+        <ele>88</ele>
+      </trkpt>
+      <trkpt lat="51.05307" lon="5.677">
+        <ele>90</ele>
+      </trkpt>
+      <trkpt lat="51.05337" lon="5.67305">
+        <ele>91</ele>
+      </trkpt>
+      <trkpt lat="51.05344" lon="5.67207">
+        <ele>91</ele>
+      </trkpt>
+      <trkpt lat="51.05146" lon="5.67159">
+        <ele>87</ele>
+      </trkpt>
+      <trkpt lat="51.05151" lon="5.67117">
+        <ele>87</ele>
+      </trkpt>
+      <trkpt lat="51.05182" lon="5.6688">
+        <ele>83</ele>
+      </trkpt>
+      <trkpt lat="51.05187" lon="5.66868">
+        <ele>84</ele>
+      </trkpt>
+      <trkpt lat="51.05218" lon="5.66813">
+        <ele>81</ele>
+      </trkpt>
+      <trkpt lat="51.05278" lon="5.66736">
+        <ele>80</ele>
+      </trkpt>
+      <trkpt lat="51.05262" lon="5.66728">
+        <ele>79</ele>
+      </trkpt>
+      <trkpt lat="51.05242" lon="5.66723">
+        <ele>79</ele>
+      </trkpt>
+      <trkpt lat="51.05016" lon="5.66671">
+        <ele>84</ele>
+      </trkpt>
+      <trkpt lat="51.04944" lon="5.6665">
+        <ele>84</ele>
+      </trkpt>
+      <trkpt lat="51.04953" lon="5.66541">
+        <ele>83</ele>
+      </trkpt>
+      <trkpt lat="51.04951" lon="5.66541">
+        <ele>83</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
