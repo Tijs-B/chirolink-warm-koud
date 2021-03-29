@@ -19,7 +19,7 @@ module.exports = {
             skipWaiting: true,
         }),
         new webpack.DefinePlugin({
-            __VERSION__: JSON.stringify(require('package.json').version),
+            __VERSION__: JSON.stringify(require('./package.json').version),
         }),
     ],
     module: {
