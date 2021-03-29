@@ -177,6 +177,8 @@ if ('serviceWorker' in navigator) {
 document.getElementById('open-alert').addEventListener('click', () => {
     alert(`Gemaakt voor Chirolink 2021. Als je problemen hebt, doe dan de analoge tochttechniek. Deze tochttechniek werkt doorgaans ook beter op een android smartphone dan op een iPhone.
 
-Je locatiegegevens blijven altijd binnen je apparaat: ze worden naar niemand doorgestuurd.`);
+Je locatiegegevens blijven altijd binnen je apparaat: ze worden naar niemand doorgestuurd.
+
+Versie: ${process.env.npm_package_version}`);
 });
 
