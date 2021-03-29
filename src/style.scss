@@ -35,7 +35,6 @@ html, body {
 }
 
 #bottom {
-  display: none;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -48,11 +47,12 @@ html, body {
   .left {
     flex-grow: 1;
     font-size: 14px;
+    visibility: hidden;
   }
 
   a {
-    color: white;
-    font-size: 24px;
+    color: inherit;
+    font-size: 28px;
   }
 }
 

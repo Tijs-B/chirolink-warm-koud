@@ -90,19 +90,19 @@ function setStatus(status) {
                                                   background-size: cover;`;
     document.body.style.color = 'white';
     document.body.style.textShadow = '0 0 24px black';
-
 }
 
 function setAccuracy(accuracy) {
     const accuracyElement = document.getElementById("accuracy");
     accuracyElement.innerText = Math.round(accuracy).toString();
+    document.getElementById("bottom-left").style.visibility = 'visible';
 }
 
 function setProgress(currentDistance, totalDistance) {
     const progressElement = document.getElementById("progress");
     progressElement.innerText =
         `${currentDistance.toFixed(0)} / ${totalDistance.toFixed(0)} m`;
-    document.getElementById("bottom").style.display = 'block';
+    document.getElementById("bottom-left").style.visibility = 'visible';
 }
 
 function positionError(error) {
