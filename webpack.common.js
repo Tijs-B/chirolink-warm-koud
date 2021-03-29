@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
@@ -16,6 +17,9 @@ module.exports = {
         new WorkboxPlugin.GenerateSW({
             clientsClaim: true,
             skipWaiting: true,
+        }),
+        new webpack.DefinePlugin({
+            __VERSION__: JSON.stringify(require('package.json').version),
         }),
     ],
     module: {

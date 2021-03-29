@@ -179,6 +179,6 @@ document.getElementById('open-alert').addEventListener('click', () => {
 
 Je locatiegegevens blijven altijd binnen je apparaat: ze worden naar niemand doorgestuurd.
 
-Versie: ${process.env.npm_package_version}`);
+Versie: ${__VERSION__}`);
 });
 
