@@ -26,7 +26,7 @@ function positionSuccess(position) {
     window.clearTimeout(positionTimerShort);
     window.clearTimeout(positionTimerLong);
     positionTimerShort = window.setTimeout(noNewPositionShort, 10 * 1000);
-    positionTimerLong = window.setTimeout(noNewPositionLong, 30 * 1000)
+    positionTimerLong = window.setTimeout(noNewPositionLong, 30 * 1000);
 
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
@@ -36,8 +36,8 @@ function positionSuccess(position) {
         if (!gotFix) {
             setStatus('none');
             showError('De nauwkeurigheid van de GPS is momenteel te laag. We wachten op een beter signaal... ' +
-                'Als je dit probleem blijft hebben, probeer dan de GPS op je gsm aan te zetten. Als dat niet lukt,' +
-                'doe dan de analoge tochttechniek')
+                'Als je dit probleem blijft hebben, probeer dan de GPS op je gsm aan te zetten en/of de pagina te ' +
+                'vernieuwen. Als dat niet lukt, doe dan de analoge tochttechniek');
         }
         return;
     }
@@ -160,7 +160,7 @@ function noNewPositionLong() {
 }
 
 positionTimerShort = window.setTimeout(noNewPositionShort, 10 * 1000);
-positionTimerLong = window.setTimeout(noNewPositionLong, 30 * 1000)
+positionTimerLong = window.setTimeout(noNewPositionLong, 30 * 1000);
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
