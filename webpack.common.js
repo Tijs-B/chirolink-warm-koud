@@ -38,7 +38,14 @@ module.exports = {
             {
                 test: /\.html$/,
                 use: ['html-loader']
+            },
+            {
+                test: /\.gpx$/,
+                use: ['gpx-loader']
             }
         ]
+    },
+    resolveLoader: {
+        modules: ['node_modules', path.resolve(__dirname, 'loaders')]
     }
 };
