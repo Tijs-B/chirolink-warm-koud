@@ -71,3 +71,15 @@ html, body {
     transform: rotate(10deg)
   }
 }
+
+@media only screen and (max-height: 500px) {
+  .status h2 {
+    margin: 10px 0;
+    font-size: 36px;
+  }
+
+  .status p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+}
