@@ -136,31 +136,32 @@ let positionOptions = {
 showError('We wachten op een GPS signaal. Als je nog geen toegang hebt gegeven tot je locatie, moet je dit nog doen');
 
 let positionWatch;
-positionWatch = navigator.geolocation.watchPosition(positionSuccess, positionError, positionOptions);
 
 let positionTimerShort;
 let positionTimerLong;
 
 function noNewPositionShort() {
-    console.log("Geen nieuwe positie voor 10 seconden, nieuwe watch zetten...");
+    console.log("Geen nieuwe positie sinds 10 seconden geleden, nieuwe watch zetten...");
     navigator.geolocation.clearWatch(positionWatch);
     positionWatch = navigator.geolocation.watchPosition(positionSuccess, positionError, positionOptions);
 
     window.clearTimeout(positionTimerShort);
-    window.setTimeout(noNewPositionShort, 10 * 1000);
+    positionTimerShort = window.setTimeout(noNewPositionShort, 10 * 1000);
 }
 
 function noNewPositionLong() {
-    console.log("Geen nieuwe positie voor 30 seconden, vraag aan gebruiker om pagina te verversen");
+    console.log("Geen nieuwe positie sinds 30 seconden geleden, vraag aan gebruiker om pagina te verversen");
     showError('We hebben al lange tijd geen nieuwe locatie gekregen. Probeer je pagina te verversen.');
     setStatus('none');
 
     window.clearTimeout(positionTimerLong);
-    window.setTimeout(noNewPositionShort, 30 * 1000);
+    positionTimerLong = window.setTimeout(noNewPositionShort, 30 * 1000);
 }
 
 positionTimerShort = window.setTimeout(noNewPositionShort, 10 * 1000);
 positionTimerLong = window.setTimeout(noNewPositionLong, 30 * 1000);
+
+positionWatch = navigator.geolocation.watchPosition(positionSuccess, positionError, positionOptions);
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
