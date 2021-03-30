@@ -33,7 +33,7 @@ export function setAccuracy(accuracy) {
 export function setProgress(currentDistance, totalDistance) {
     const progressElement = document.getElementById("progress");
     progressElement.innerText =
-        `${currentDistance.toFixed(0)} / ${totalDistance.toFixed(0)} m`;
+        `${currentDistance.toFixed(0)} / ${totalDistance.toFixed(0)}m`;
     document.getElementById("bottom-left").style.visibility = 'visible';
 }
 

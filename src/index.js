@@ -19,7 +19,7 @@ function positionSuccess(position) {
 
     if (accuracy > 30) {
         if (!gotFix) {
-            showError(`De nauwkeurigheid van de GPS is momenteel te laag (${accuracy} m). We wachten op een beter signaal... ` +
+            showError(`De nauwkeurigheid van de GPS is momenteel te laag (${accuracy}m). We wachten op een beter signaal... ` +
                 'Als je dit probleem blijft hebben, probeer dan de GPS op je gsm aan te zetten en/of de pagina te ' +
                 'vernieuwen. Als dat niet lukt, doe dan de analoge tochttechniek');
         }
