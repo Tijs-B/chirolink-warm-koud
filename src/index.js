@@ -19,9 +19,9 @@ function positionSuccess(position) {
 
     if (accuracy > 30) {
         if (!gotFix) {
-            showError(`De nauwkeurigheid van de GPS is momenteel te laag (${accuracy}m). We wachten op een beter signaal... ` +
+            showError(`De nauwkeurigheid van je locatie is momenteel te laag (${accuracy}m). We wachten op een beter signaal... ` +
                 'Als je dit probleem blijft hebben, probeer dan de GPS op je gsm aan te zetten en/of de pagina te ' +
-                'vernieuwen. Als dat niet lukt, doe dan de analoge tochttechniek');
+                'vernieuwen. Als dat niet lukt, doe dan de analoge tochttechniek.');
         }
         return;
     }
@@ -140,7 +140,7 @@ if ('serviceWorker' in navigator) {
 document.getElementById('open-alert').addEventListener('click', () => {
     alert(`Gemaakt voor Chirolink 2021. Als je problemen hebt, doe dan de analoge tochttechniek. Deze tochttechniek werkt doorgaans ook beter op een android smartphone dan op een iPhone.
 
-Je locatiegegevens blijven altijd binnen je apparaat: ze worden naar niemand doorgestuurd.
+Je locatiegegevens blijven altijd binnen je apparaat: ze worden naar niemand doorgestuurd, ook niet naar Chirolink.
 
 Versie: ${__VERSION__}`);
 });
