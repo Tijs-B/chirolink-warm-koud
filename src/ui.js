@@ -3,7 +3,21 @@ for (let status of ['extreme-kou', 'vrieskou', 'koud', 'lauw', 'vrij-warm', 'sup
     statuses[status] = require(`./img/${status}.jpg`);
 }
 
+let lastUpdated = 0;
+
+export function initUI() {
+    window.setInterval(() => {
+        if (lastUpdated !== 0) {
+            let secondsPassed = Math.floor((new Date().getTime() - lastUpdated) / 1000);
+            secondsPassed = Math.max(0, secondsPassed);
+            document.getElementById("updated").innerText = secondsPassed.toString();
+        }
+    }, 1000);
+}
+
+
 export function setStatus(status) {
+    lastUpdated = new Date().getTime();
     for (let div of document.getElementsByClassName("status")) {
         div.style.display = 'none';
     }

@@ -1,11 +1,10 @@
 import {calculateDistanceToTrack} from './track.js';
-import {showError, setAccuracy, setProgress, setStatus} from "./ui.js";
+import {initUI, showError, setAccuracy, setProgress, setStatus} from "./ui.js";
 import './style.scss';
 
+initUI();
 
-let lastUpdated = 0;
 let gotFix = false;
-
 
 function positionSuccess(position) {
     console.log(position);
@@ -25,7 +24,6 @@ function positionSuccess(position) {
         }
         return;
     }
-    lastUpdated = new Date().getTime();
     gotFix = true;
 
     const data = calculateDistanceToTrack({lat: lat, lon: lon});
@@ -69,17 +67,6 @@ function positionError(error) {
     }
 }
 
-window.setInterval(() => {
-    if (lastUpdated !== 0) {
-        let secondsPassed = Math.floor((new Date().getTime() - lastUpdated) / 1000);
-        secondsPassed = Math.max(0, secondsPassed);
-        document.getElementById("updated").innerText = secondsPassed.toString();
-
-        if (secondsPassed >= 100) {
-            resetPositionWatch();
-        }
-    }
-}, 1000);
 
 const positionOptions = {
     enableHighAccuracy: true
