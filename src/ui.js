@@ -5,22 +5,23 @@ for (let status of ['extreme-kou', 'vrieskou', 'koud', 'lauw', 'vrij-warm', 'sup
 
 let lastUpdated = 0;
 
+const accuracyElement = document.getElementById("accuracy");
+const lastUpdatedElement = document.getElementById("last-updated");
+const progressElement = document.getElementById("progress");
+const bottomLeftElement = document.getElementById("bottom-left");
+const errorElement = document.getElementById("error-msg");
+const openAlertElement = document.getElementById('open-alert');
+
 export function initUI() {
     window.setInterval(() => {
         if (lastUpdated !== 0) {
             let secondsPassed = Math.floor((new Date().getTime() - lastUpdated) / 1000);
             secondsPassed = Math.max(0, secondsPassed);
-            document.getElementById("updated").innerText = secondsPassed.toString();
+            lastUpdatedElement.innerText = secondsPassed.toString();
         }
     }, 1000);
 
-    document.getElementById('open-alert').addEventListener('click', () => {
-        alert(`Gemaakt voor Chirolink 2021. Als je problemen hebt, doe dan de analoge tochttechniek. Deze tochttechniek werkt doorgaans ook beter op een android smartphone dan op een iPhone.
-
-Je locatiegegevens blijven altijd binnen je apparaat: ze worden naar niemand doorgestuurd, ook niet naar Chirolink.
-
-Versie: ${__VERSION__}`);
-    });
+    openAlertElement.addEventListener('click', () => showInfoAlert());
 }
 
 export function setStatus(status) {
@@ -45,25 +46,31 @@ export function setStatus(status) {
     document.body.style.textShadow = '0 0 24px black';
 }
 
+
 export function setAccuracy(accuracy) {
-    const accuracyElement = document.getElementById("accuracy");
     accuracyElement.innerText = Math.round(accuracy).toString();
-    document.getElementById("bottom-left").style.visibility = 'visible';
+    bottomLeftElement.style.visibility = 'visible';
 }
 
 export function setProgress(currentDistance, totalDistance) {
-    const progressElement = document.getElementById("progress");
     progressElement.innerText =
-        `${currentDistance.toFixed(0)} / ${totalDistance.toFixed(0)}m`;
-    document.getElementById("bottom-left").style.visibility = 'visible';
+        `${Math.round(currentDistance)} / ${Math.round(totalDistance)}m`;
+    bottomLeftElement.style.visibility = 'visible';
 }
 
 export function showError(message) {
-    const element = document.getElementById("error-msg");
     if (message.length > 0) {
         setStatus('none');
-        element.innerText = message;
+        errorElement.innerText = message;
     } else {
-        element.innerText = "";
+        errorElement.innerText = "";
     }
+}
+
+export function showInfoAlert() {
+    alert(`Gemaakt voor Chirolink 2021. Als je problemen hebt, doe dan de analoge tochttechniek. Deze tochttechniek werkt doorgaans ook beter op een android smartphone dan op een iPhone.
+
+Je locatiegegevens blijven altijd binnen je apparaat: ze worden naar niemand doorgestuurd, ook niet naar Chirolink.
+
+Versie: ${__VERSION__}`);
 }
