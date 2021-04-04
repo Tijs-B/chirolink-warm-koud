@@ -5,9 +5,12 @@ import './style.scss';
 initUI();
 
 let gotFix = false;
+const isDev = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development');
 
 function positionSuccess(position) {
-    console.log(position);
+    if (isDev) {
+        console.log(position);
+    }
 
     resetShortTimer();
     resetLongTimer();
@@ -16,7 +19,7 @@ function positionSuccess(position) {
     const lon = position.coords.longitude;
     const accuracy = position.coords.accuracy;
 
-    if (accuracy > 30) {
+    if (! isDev && accuracy > 30) {
         if (!gotFix) {
             showError(`De nauwkeurigheid van je locatie is momenteel te laag (${Math.round(accuracy)}m). We wachten op een beter signaal... ` +
                 'Als je dit probleem blijft hebben, probeer dan de GPS op je gsm aan te zetten en/of de pagina te ' +
@@ -67,7 +70,6 @@ function positionError(error) {
     }
 }
 
-
 const positionOptions = {
     enableHighAccuracy: true
 };
@@ -99,11 +101,17 @@ function resetPositionWatch() {
 }
 
 function noNewPositionShort() {
+    if (isDev) {
+        console.log("Short timer ran out, resetting position watch");
+    }
     resetPositionWatch();
     resetShortTimer();
 }
 
 function noNewPositionLong() {
+    if (isDev) {
+        console.log("Long timer ran out, showing warning to user");
+    }
     showError('We hebben al lange tijd geen nieuwe locatie gekregen. Probeer je pagina te verversen.');
     resetLongTimer();
 }
@@ -114,7 +122,7 @@ resetPositionWatch();
 
 window.addEventListener('focus', resetPositionWatch);
 
-if ('serviceWorker' in navigator) {
+if (! isDev && 'serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('/service-worker.js').then(registration => {
             console.log('SW registered: ', registration);
@@ -124,11 +132,4 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-document.getElementById('open-alert').addEventListener('click', () => {
-    alert(`Gemaakt voor Chirolink 2021. Als je problemen hebt, doe dan de analoge tochttechniek. Deze tochttechniek werkt doorgaans ook beter op een android smartphone dan op een iPhone.
-
-Je locatiegegevens blijven altijd binnen je apparaat: ze worden naar niemand doorgestuurd, ook niet naar Chirolink.
-
-Versie: ${__VERSION__}`);
-});
 
