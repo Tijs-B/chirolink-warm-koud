@@ -1,4 +1,4 @@
-import GPXData from './track.gpx';
+import GPXData from './track-as.gpx';
 const INTERPOLATION_RESOLUTION = 2;
 
 function interpolatePoints(points) {

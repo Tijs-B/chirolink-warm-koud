@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
     "serve": "webpack serve --config webpack.dev.js --host 0.0.0.0",
-    "deploy": "webpack --config webpack.prod.js && surge --domain https://link-warm-koud.surge.sh --project dist"
+    "deploy": "webpack --config webpack.prod.js && surge --domain https://link-warm-koud.surge.sh --project dist",
+    "deploy-test": "webpack --config webpack.dev.js && surge --domain https://link-warm-koud-test.surge.sh --project dist"
   },
   "keywords": [],
   "author": "",

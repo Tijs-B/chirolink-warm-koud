@@ -1,8 +1,10 @@
 import {calculateDistanceToTrack} from './track.js';
 import {initUI, showError, setAccuracy, setProgress, setStatus} from "./ui.js";
 import './style.scss';
+import {initAudio, stopAudio, updateAudioStatus} from "./audio";
 
 initUI();
+initAudio();
 
 let gotFix = false;
 const isDev = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development');
@@ -24,6 +26,7 @@ function positionSuccess(position) {
             showError(`De nauwkeurigheid van je locatie is momenteel te laag (${Math.round(accuracy)}m). We wachten op een beter signaal... ` +
                 'Als je dit probleem blijft hebben, probeer dan de GPS op je gsm aan te zetten en/of de pagina te ' +
                 'vernieuwen. Als dat niet lukt, doe dan de analoge tochttechniek.');
+            stopAudio();
         }
         return;
     }
@@ -53,6 +56,7 @@ function positionSuccess(position) {
     setStatus(status);
     setAccuracy(accuracy);
     showError("");
+    updateAudioStatus(status);
 }
 
 function positionError(error) {
@@ -61,11 +65,13 @@ function positionError(error) {
         showError("Je hebt geen toestemming gegeven voor de GPS locatie. Probeer de pagina te vernieuwen. " +
             "Als je niet opnieuw wordt gevraagd om toestemming te geven, klik dan op het hangslotje " +
             "in je adresbalk om de toestemming tot locatie te geven.");
+        stopAudio();
         console.log(error.message);
     } else {
         // Position unavailable
         showError("Je positie is momenteel niet beschikbaar... " +
             "Als je dit probleem blijft hebben, doe dan de analoge tochttechniek.");
+        stopAudio();
         console.log(error.message);
     }
 }
@@ -113,6 +119,7 @@ function noNewPositionLong() {
         console.log("Long timer ran out, showing warning to user");
     }
     showError('We hebben al lange tijd geen nieuwe locatie gekregen. Probeer je pagina te verversen.');
+    stopAudio();
     resetLongTimer();
 }
 
