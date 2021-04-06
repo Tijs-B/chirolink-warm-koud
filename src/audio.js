@@ -39,12 +39,16 @@ function setVoice() {
     }
     if (defaultVoice != null && defaultVoice.lang === 'nl-BE') {
         voice = defaultVoice;
+        console.log("Using default voice");
     } else if (flemishVoice != null) {
         voice = flemishVoice;
+        console.log("Using Flemish voice");
     } else if (dutchVoice != null) {
         voice = dutchVoice;
+        console.log("Using Dutch voice");
     } else {
         voice = null;
+        console.log("No good voices found, the list of voices is ", voices);
     }
 
     updateElement();

@@ -107,17 +107,13 @@ function resetPositionWatch() {
 }
 
 function noNewPositionShort() {
-    if (isDev) {
-        console.log("Short timer ran out, resetting position watch");
-    }
+    console.log("Short timer ran out, resetting position watch");
     resetPositionWatch();
     resetShortTimer();
 }
 
 function noNewPositionLong() {
-    if (isDev) {
-        console.log("Long timer ran out, showing warning to user");
-    }
+    console.log("Long timer ran out, showing warning to user");
     showError('We hebben al lange tijd geen nieuwe locatie gekregen. Probeer je pagina te verversen.');
     stopAudio();
     resetLongTimer();
