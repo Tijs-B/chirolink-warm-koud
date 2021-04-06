@@ -4,6 +4,7 @@ let synth = null;
 let voice = null;
 let timer = null;
 let currentStatus = null;
+let utterance = null;
 
 const isMutedElement = document.getElementById("is-muted");
 const isUnmutedElement = document.getElementById("is-unmuted");
@@ -76,29 +77,7 @@ export function initAudio() {
 }
 
 function speak() {
-    if (synth != null && voice != null && currentStatus != null && ! isMuted && document.visibilityState === 'visible') {
-        const utterance = new SpeechSynthesisUtterance(currentStatus.replaceAll("=", " "));
-        let pitch = 1;
-        let rate = 1;
-        if (currentStatus === 'super-heet') {
-            pitch = 1.4;
-        } else if (currentStatus === 'vrij-warm') {
-            pitch = 1.2;
-        } else if (currentStatus === 'lauw') {
-            pitch = 1;
-        } else if (currentStatus === 'koud') {
-            pitch = 0.8;
-            rate = 0.8;
-        } else if (currentStatus === 'vrieskou') {
-            pitch = 0.6;
-            rate = 0.7;
-        } else if (currentStatus === 'extreme-kou') {
-            pitch = 0.4;
-            rate = 0.6;
-        }
-        utterance.pitch = pitch;
-        utterance.voice = voice;
-        utterance.rate = rate;
+    if (synth != null && voice != null && utterance != null && ! isMuted && document.visibilityState === 'visible') {
         synth.speak(utterance);
     }
 
@@ -112,11 +91,34 @@ function speak() {
 }
 
 export function updateAudioStatus(status) {
-    currentStatus = 'vrij-warm';
+    currentStatus = status;
+    utterance = new SpeechSynthesisUtterance(currentStatus.replaceAll("=", " "));
+    let pitch = 1;
+    let rate = 1;
+    if (status === 'super-heet') {
+        pitch = 1.4;
+    } else if (status === 'vrij-warm') {
+        pitch = 1.2;
+    } else if (status === 'lauw') {
+        pitch = 1;
+    } else if (status === 'koud') {
+        pitch = 0.8;
+        rate = 0.8;
+    } else if (status === 'vrieskou') {
+        pitch = 0.6;
+        rate = 0.7;
+    } else if (status === 'extreme-kou') {
+        pitch = 0.4;
+        rate = 0.6;
+    }
+    utterance.pitch = pitch;
+    utterance.voice = voice;
+    utterance.rate = rate;
 }
 
 export function stopAudio() {
     currentStatus = null;
+    utterance = null;
     if (synth != null) {
         synth.cancel();
     }
