@@ -61,7 +61,7 @@ function unmute() {
 }
 
 export function initAudio() {
-    isUnmutedElement.addEventListener('click', () => unmute());
+    isUnmutedElement.addEventListener('click', () => mute());
     isMutedElement.addEventListener('click', () => unmute());
 
     if (! window.hasOwnProperty("speechSynthesis")) {
