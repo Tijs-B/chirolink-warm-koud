@@ -90,6 +90,8 @@ function speak() {
         timeout = 1000;
     } else if (currentStatus === 'vrij-warm') {
         timeout = 1500;
+    } else if (currentStatus === 'vrieskou' || currentStatus === 'extreme-kou') {
+        timeout = 3000;
     }
     timer = window.setTimeout(() => speak(), timeout);
 }
