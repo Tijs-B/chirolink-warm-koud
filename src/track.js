@@ -1,4 +1,11 @@
-import GPXData from './track-as.gpx';
+const isDev = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development');
+let GPXData;
+
+if (isDev) {
+    GPXData = require('./track-as.gpx');
+} else {
+    GPXData = require('./track.gpx');
+}
 const INTERPOLATION_RESOLUTION = 2;
 
 function interpolatePoints(points) {
