@@ -1,0 +1,27 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14.x'
+          cache: 'npm'
+      - name: Install packages
+        run: npm ci
+      - name: Build the app
+        run: npm run build
+      - name: Install Surge
+        run: npm install -g surge
+      - name: Deploy to Surge
+        run: surge ./dist https://link-warm-koud.surge.sh --token ${{ secrets.SURGE_TOKEN }}
