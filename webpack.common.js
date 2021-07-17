@@ -2,7 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
+let commitHash = require('child_process')
+    .execSync('git rev-parse --short HEAD')
+    .toString();
 
 module.exports = {
     entry: './src/index.js',
@@ -21,6 +24,7 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             __VERSION__: JSON.stringify(require('./package.json').version),
+	    __COMMIT_HASH__: JSON.stringify(commitHash),
         }),
     ],
     module: {

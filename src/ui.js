@@ -74,5 +74,7 @@ Je locatiegegevens blijven altijd binnen je apparaat: ze worden naar niemand doo
 
 Je kan het codeboekje voor de tocht van Maaseik downloaden op de site van Chirolink: https://chirolink.be/dagtochten/maaseik/
 
-Versie: ${__VERSION__}`);
+Versie: ${__VERSION__}
+
+Commit: ${__COMMIT_HASH__}`);
 }
