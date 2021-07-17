@@ -4,7 +4,7 @@
 Install npm, daarna:
 
 ```console
-$ git clone https://github.com/Tijs-B/link.git
+$ git clone https://github.com/Tijs-B/chirolink-warm-koud.git
 $ cd link
 $ npm install
 ```
@@ -18,10 +18,5 @@ $ npm run dev
 Om te builden in productie:
 ```console
 $ npm run build
-```
-
-Om te deployen naar surge (maar alleen als je over bevoegdheden beschikt):
-```console
-$ npm run deploy
 ```
 
