@@ -1,6 +1,5 @@
 import {calculateDistanceToTrack} from './track.js';
 import {initUI, showError, setAccuracy, setProgress, setStatus} from "./ui.js";
-import './style.scss';
 import {initAudio, stopAudio, updateAudioStatus} from "./audio";
 
 initUI();

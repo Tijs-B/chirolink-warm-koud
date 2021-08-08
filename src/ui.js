@@ -1,3 +1,6 @@
+import './style.scss';
+import './icons/css/fontello.css';
+
 const statuses = {};
 for (let status of ['extreme-kou', 'vrieskou', 'koud', 'lauw', 'vrij-warm', 'super-heet']) {
     statuses[status] = require(`./img/${status}.jpg`);

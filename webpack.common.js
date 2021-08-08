@@ -38,11 +38,22 @@ module.exports = {
                 ]
             },
             {
+                test: /\.css$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                ]
+            },
+            {
                 test: /\.(png|jpe?g|svg|gif)$/,
                 type: 'asset/resource',
                 generator: {
                     filename: 'img/[hash][ext][query]',
                 },
+            },
+            {
+                test: /\.(eot|woff|woff2|ttf)$/,
+                use: ['file-loader']
             },
             {
                 test: /\.html$/,
