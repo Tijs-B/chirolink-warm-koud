@@ -1,11 +1,12 @@
-const isDev = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development');
-let GPXData;
+const GPXData = require('./track.gpx');
 
-if (isDev) {
-    GPXData = require('./track-as.gpx');
-} else {
-    GPXData = require('./track.gpx');
-}
+// const isDev = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development');
+// let GPXData;
+// if (isDev) {
+//     GPXData = require('./track-as.gpx');
+// } else {
+//     GPXData = require('./track.gpx');
+// }
 const INTERPOLATION_RESOLUTION = 2;
 
 function interpolatePoints(points) {
