@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 let commitHash = require('child_process')
     .execSync('git rev-parse --short HEAD')
@@ -26,22 +27,16 @@ module.exports = {
             __VERSION__: JSON.stringify(require('./package.json').version),
 	    __COMMIT_HASH__: JSON.stringify(commitHash),
         }),
+        new MiniCssExtractPlugin()
     ],
     module: {
         rules: [
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.s?[ac]ss$/i,
                 use: [
-                    "style-loader",
+                    MiniCssExtractPlugin.loader,
                     "css-loader",
                     "sass-loader",
-                ]
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    "style-loader",
-                    "css-loader",
                 ]
             },
             {
@@ -67,5 +62,5 @@ module.exports = {
     },
     resolveLoader: {
         modules: ['node_modules', path.resolve(__dirname, 'loaders')]
-    }
+    },
 };
