@@ -21,7 +21,7 @@ jobs:
         run: npm ci
       - name: Build the app
         run: npm run build
-      - name: Install Surge
-        run: npm install -g surge
-      - name: Deploy to Surge
-        run: surge ./dist https://link-warm-koud.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      # - name: Install Surge
+      #   run: npm install -g surge
+      # - name: Deploy to Surge
+      #   run: surge ./dist https://link-warm-koud.surge.sh --token ${{ secrets.SURGE_TOKEN }}
