@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "copy-webpack-plugin": "^10.2.0",
     "file-loader": "^6.2.0",
     "gpxparser": "^3.0.7",
     "html-loader": "^2.1.2",

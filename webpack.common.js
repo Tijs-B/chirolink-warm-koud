@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 let commitHash = require('child_process')
     .execSync('git rev-parse --short HEAD')
@@ -25,9 +26,14 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             __VERSION__: JSON.stringify(require('./package.json').version),
-	    __COMMIT_HASH__: JSON.stringify(commitHash),
+            __COMMIT_HASH__: JSON.stringify(commitHash),
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
+        new CopyPlugin({
+            patterns: [
+                {from: "src/robots.txt", to: "robots.txt"},
+            ]
+        }),
     ],
     module: {
         rules: [
