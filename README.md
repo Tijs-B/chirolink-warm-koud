@@ -12,7 +12,7 @@ $ npm install
 ## Running
 Om het in ontwikkelaarsmodus uit te voeren (met rebuild bij change, en local web server):
 ```console
-$ npm run dev
+$ npm run serve
 ```
 
 Om te builden in productie:
