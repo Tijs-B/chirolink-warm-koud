@@ -1,66 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="RouteYou" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
-  <trk>
-    <name>Rotem - Opoeteren</name>
-    <desc>&lt;p&gt;Van Brugstraat, 3650 Rotem, België&lt;br/&gt;
-Naar Driepaalweg, 3680 Opoeteren, België&lt;/p&gt;
-
-&lt;p&gt;Routering Kortste - OSM&lt;/p&gt;</desc>
-    <trkseg>
-      <trkpt lat="51.05435" lon="5.67973">
-        <ele>87</ele>
-      </trkpt>
-      <trkpt lat="51.05435" lon="5.67972">
-        <ele>87</ele>
-      </trkpt>
-      <trkpt lat="51.05289" lon="5.67947">
-        <ele>88</ele>
-      </trkpt>
-      <trkpt lat="51.05307" lon="5.677">
-        <ele>90</ele>
-      </trkpt>
-      <trkpt lat="51.05337" lon="5.67305">
-        <ele>91</ele>
-      </trkpt>
-      <trkpt lat="51.05344" lon="5.67207">
-        <ele>91</ele>
-      </trkpt>
-      <trkpt lat="51.05146" lon="5.67159">
-        <ele>87</ele>
-      </trkpt>
-      <trkpt lat="51.05151" lon="5.67117">
-        <ele>87</ele>
-      </trkpt>
-      <trkpt lat="51.05182" lon="5.6688">
-        <ele>83</ele>
-      </trkpt>
-      <trkpt lat="51.05187" lon="5.66868">
-        <ele>84</ele>
-      </trkpt>
-      <trkpt lat="51.05218" lon="5.66813">
-        <ele>81</ele>
-      </trkpt>
-      <trkpt lat="51.05278" lon="5.66736">
-        <ele>80</ele>
-      </trkpt>
-      <trkpt lat="51.05262" lon="5.66728">
-        <ele>79</ele>
-      </trkpt>
-      <trkpt lat="51.05242" lon="5.66723">
-        <ele>79</ele>
-      </trkpt>
-      <trkpt lat="51.05016" lon="5.66671">
-        <ele>84</ele>
-      </trkpt>
-      <trkpt lat="51.04944" lon="5.6665">
-        <ele>84</ele>
-      </trkpt>
-      <trkpt lat="51.04953" lon="5.66541">
-        <ele>83</ele>
-      </trkpt>
-      <trkpt lat="51.04951" lon="5.66541">
-        <ele>83</ele>
-      </trkpt>
-    </trkseg>
-  </trk>
+<!-- track-length = 824 filtered ascend = 21 plain-ascend = 20 cost=1054 energy=.0kwh time=10m 10s -->
+<gpx 
+ xmlns="http://www.topografix.com/GPX/1/1" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" 
+ creator="BRouter-1.6.3" version="1.1">
+ <trk>
+  <name>Opoeteren - 0.8km</name>
+  <trkseg>
+   <trkpt lon="5.648083" lat="51.060007"><ele>59.25</ele></trkpt>
+   <trkpt lon="5.648244" lat="51.059923"><ele>59.5</ele></trkpt>
+   <trkpt lon="5.648496" lat="51.059855"><ele>60.0</ele></trkpt>
+   <trkpt lon="5.649400" lat="51.059729"><ele>63.25</ele></trkpt>
+   <trkpt lon="5.649513" lat="51.059722"><ele>63.75</ele></trkpt>
+   <trkpt lon="5.650846" lat="51.059489"><ele>68.0</ele></trkpt>
+   <trkpt lon="5.651082" lat="51.059397"><ele>68.75</ele></trkpt>
+   <trkpt lon="5.651616" lat="51.058935"><ele>72.0</ele></trkpt>
+   <trkpt lon="5.652062" lat="51.058517"><ele>75.5</ele></trkpt>
+   <trkpt lon="5.652223" lat="51.058418"><ele>76.0</ele></trkpt>
+   <trkpt lon="5.652958" lat="51.058734"><ele>75.0</ele></trkpt>
+   <trkpt lon="5.653503" lat="51.058968"><ele>74.5</ele></trkpt>
+   <trkpt lon="5.653596" lat="51.058962"><ele>74.5</ele></trkpt>
+   <trkpt lon="5.653700" lat="51.058979"><ele>74.5</ele></trkpt>
+   <trkpt lon="5.654335" lat="51.059196"><ele>73.75</ele></trkpt>
+   <trkpt lon="5.654543" lat="51.059274"><ele>73.5</ele></trkpt>
+   <trkpt lon="5.654163" lat="51.059569"><ele>73.5</ele></trkpt>
+   <trkpt lon="5.653976" lat="51.059753"><ele>73.0</ele></trkpt>
+   <trkpt lon="5.653631" lat="51.060068"><ele>72.25</ele></trkpt>
+   <trkpt lon="5.653914" lat="51.060225"><ele>73.0</ele></trkpt>
+   <trkpt lon="5.654152" lat="51.060357"><ele>73.75</ele></trkpt>
+   <trkpt lon="5.654276" lat="51.060425"><ele>74.25</ele></trkpt>
+   <trkpt lon="5.654410" lat="51.060479"><ele>75.0</ele></trkpt>
+   <trkpt lon="5.654525" lat="51.060605"><ele>75.75</ele></trkpt>
+   <trkpt lon="5.654643" lat="51.060644"><ele>76.5</ele></trkpt>
+   <trkpt lon="5.654698" lat="51.060694"><ele>77.0</ele></trkpt>
+   <trkpt lon="5.654764" lat="51.060716"><ele>77.25</ele></trkpt>
+   <trkpt lon="5.654963" lat="51.060713"><ele>78.25</ele></trkpt>
+   <trkpt lon="5.655033" lat="51.060963"><ele>78.25</ele></trkpt>
+  </trkseg>
+ </trk>
 </gpx>
