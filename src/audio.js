@@ -98,25 +98,32 @@ function speak() {
 
 export function updateAudioStatus(status) {
     currentStatus = status;
-    utterance = new SpeechSynthesisUtterance(currentStatus.replaceAll("=", " "));
     let pitch = 1;
     let rate = 1;
+    let text = "blabla";
     if (status === 'super-heet') {
         pitch = 1.4;
+	text = "Goed bezig";
     } else if (status === 'vrij-warm') {
         pitch = 1.2;
+	text = "Shotje!";
     } else if (status === 'lauw') {
         pitch = 1;
+	text = "Twee shotjes!";
     } else if (status === 'koud') {
         pitch = 0.8;
         rate = 0.8;
+	text = "Drie shotjes!";
     } else if (status === 'vrieskou') {
         pitch = 0.6;
         rate = 0.7;
+	text = "Oei slecht bezig!";
     } else if (status === 'extreme-kou') {
         pitch = 0.4;
         rate = 0.6;
+	text = "Ja maar ja maar";
     }
+    utterance = new SpeechSynthesisUtterance(text);
     utterance.pitch = pitch;
     utterance.voice = voice;
     utterance.rate = rate;

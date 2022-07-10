@@ -38,9 +38,9 @@ function positionSuccess(position) {
     let status;
     if (distance <= 10) {
         status = "super-heet";
-    } else if (10 < distance && distance <= 20) {
+    } else if (10 < distance && distance <= 18) {
         status = "vrij-warm";
-    } else if (20 < distance && distance <= 50) {
+    } else if (18 < distance && distance <= 50) {
         status = "lauw";
     } else if (50 <= distance && distance < 100) {
         status = "koud";
