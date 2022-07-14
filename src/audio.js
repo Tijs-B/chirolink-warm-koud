@@ -60,9 +60,6 @@ function mute() {
 }
 
 function unmute() {
-    isMuted = false;
-    updateElement();
-    restartTimerAndSpeak();
 }
 
 export function initAudio() {
@@ -77,7 +74,6 @@ export function initAudio() {
         synth.onvoiceschanged = setVoice;
     }
 
-    restartTimerAndSpeak();
 }
 
 function speak() {
