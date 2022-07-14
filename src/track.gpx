@@ -1,42 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- track-length = 824 filtered ascend = 21 plain-ascend = 20 cost=1054 energy=.0kwh time=10m 10s -->
-<gpx 
- xmlns="http://www.topografix.com/GPX/1/1" 
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
- xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" 
- creator="BRouter-1.6.3" version="1.1">
- <trk>
-  <name>Opoeteren - 0.8km</name>
-  <trkseg>
-   <trkpt lon="5.648083" lat="51.060007"><ele>59.25</ele></trkpt>
-   <trkpt lon="5.648244" lat="51.059923"><ele>59.5</ele></trkpt>
-   <trkpt lon="5.648496" lat="51.059855"><ele>60.0</ele></trkpt>
-   <trkpt lon="5.649400" lat="51.059729"><ele>63.25</ele></trkpt>
-   <trkpt lon="5.649513" lat="51.059722"><ele>63.75</ele></trkpt>
-   <trkpt lon="5.650846" lat="51.059489"><ele>68.0</ele></trkpt>
-   <trkpt lon="5.651082" lat="51.059397"><ele>68.75</ele></trkpt>
-   <trkpt lon="5.651616" lat="51.058935"><ele>72.0</ele></trkpt>
-   <trkpt lon="5.652062" lat="51.058517"><ele>75.5</ele></trkpt>
-   <trkpt lon="5.652223" lat="51.058418"><ele>76.0</ele></trkpt>
-   <trkpt lon="5.652958" lat="51.058734"><ele>75.0</ele></trkpt>
-   <trkpt lon="5.653503" lat="51.058968"><ele>74.5</ele></trkpt>
-   <trkpt lon="5.653596" lat="51.058962"><ele>74.5</ele></trkpt>
-   <trkpt lon="5.653700" lat="51.058979"><ele>74.5</ele></trkpt>
-   <trkpt lon="5.654335" lat="51.059196"><ele>73.75</ele></trkpt>
-   <trkpt lon="5.654543" lat="51.059274"><ele>73.5</ele></trkpt>
-   <trkpt lon="5.654163" lat="51.059569"><ele>73.5</ele></trkpt>
-   <trkpt lon="5.653976" lat="51.059753"><ele>73.0</ele></trkpt>
-   <trkpt lon="5.653631" lat="51.060068"><ele>72.25</ele></trkpt>
-   <trkpt lon="5.653914" lat="51.060225"><ele>73.0</ele></trkpt>
-   <trkpt lon="5.654152" lat="51.060357"><ele>73.75</ele></trkpt>
-   <trkpt lon="5.654276" lat="51.060425"><ele>74.25</ele></trkpt>
-   <trkpt lon="5.654410" lat="51.060479"><ele>75.0</ele></trkpt>
-   <trkpt lon="5.654525" lat="51.060605"><ele>75.75</ele></trkpt>
-   <trkpt lon="5.654643" lat="51.060644"><ele>76.5</ele></trkpt>
-   <trkpt lon="5.654698" lat="51.060694"><ele>77.0</ele></trkpt>
-   <trkpt lon="5.654764" lat="51.060716"><ele>77.25</ele></trkpt>
-   <trkpt lon="5.654963" lat="51.060713"><ele>78.25</ele></trkpt>
-   <trkpt lon="5.655033" lat="51.060963"><ele>78.25</ele></trkpt>
-  </trkseg>
- </trk>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="RouteYou" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <trk>
+    <name>Hoffelt</name>
+    <desc>&lt;p&gt;Van 9960 Hoffelt, Luxemburg&lt;br/&gt;
+Naar Am Huälleweeg 29, 9960 Hoffelt, Luxemburg&lt;/p&gt;
+
+&lt;p&gt;Routering Wandel - mooiste&lt;/p&gt;</desc>
+    <trkseg>
+      <trkpt lat="50.0959" lon="5.90844">
+        <ele>466</ele>
+      </trkpt>
+      <trkpt lat="50.09597" lon="5.90876">
+        <ele>464</ele>
+      </trkpt>
+      <trkpt lat="50.09605" lon="5.90939">
+        <ele>462</ele>
+      </trkpt>
+      <trkpt lat="50.09608" lon="5.9099">
+        <ele>462</ele>
+      </trkpt>
+      <trkpt lat="50.09613" lon="5.91167">
+        <ele>459</ele>
+      </trkpt>
+      <trkpt lat="50.09616" lon="5.91188">
+        <ele>458</ele>
+      </trkpt>
+      <trkpt lat="50.09625" lon="5.91229">
+        <ele>458</ele>
+      </trkpt>
+      <trkpt lat="50.09674" lon="5.91392">
+        <ele>457</ele>
+      </trkpt>
+      <trkpt lat="50.09675" lon="5.91406">
+        <ele>457</ele>
+      </trkpt>
+      <trkpt lat="50.09674" lon="5.91417">
+        <ele>457</ele>
+      </trkpt>
+      <trkpt lat="50.09693" lon="5.91453">
+        <ele>457</ele>
+      </trkpt>
+      <trkpt lat="50.09726" lon="5.91558">
+        <ele>456</ele>
+      </trkpt>
+      <trkpt lat="50.09739" lon="5.91591">
+        <ele>456</ele>
+      </trkpt>
+      <trkpt lat="50.09754" lon="5.91623">
+        <ele>454</ele>
+      </trkpt>
+      <trkpt lat="50.09847" lon="5.9178">
+        <ele>453</ele>
+      </trkpt>
+      <trkpt lat="50.09863" lon="5.9181">
+        <ele>453</ele>
+      </trkpt>
+      <trkpt lat="50.09887" lon="5.9187">
+        <ele>451</ele>
+      </trkpt>
+      <trkpt lat="50.09868" lon="5.91888">
+        <ele>452</ele>
+      </trkpt>
+      <trkpt lat="50.09867" lon="5.91894">
+        <ele>452</ele>
+      </trkpt>
+      <trkpt lat="50.09873" lon="5.91922">
+        <ele>451</ele>
+      </trkpt>
+      <trkpt lat="50.0993" lon="5.92056">
+        <ele>449</ele>
+      </trkpt>
+      <trkpt lat="50.09906" lon="5.92102">
+        <ele>447</ele>
+      </trkpt>
+      <trkpt lat="50.09904" lon="5.92109">
+        <ele>447</ele>
+      </trkpt>
+      <trkpt lat="50.099" lon="5.92137">
+        <ele>447</ele>
+      </trkpt>
+      <trkpt lat="50.09901" lon="5.92146">
+        <ele>447</ele>
+      </trkpt>
+      <trkpt lat="50.09906" lon="5.92208">
+        <ele>448</ele>
+      </trkpt>
+      <trkpt lat="50.09918" lon="5.92187">
+        <ele>448</ele>
+      </trkpt>
+      <trkpt lat="50.09952" lon="5.92142">
+        <ele>448</ele>
+      </trkpt>
+      <trkpt lat="50.09972" lon="5.92173">
+        <ele>449</ele>
+      </trkpt>
+      <trkpt lat="50.09964" lon="5.92214">
+        <ele>448</ele>
+      </trkpt>
+      <trkpt lat="50.09964" lon="5.92236">
+        <ele>449</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
 </gpx>
